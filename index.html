@@ -1,0 +1,113 @@
+<!-- Filename:index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>
+          Recommended Windows programs
+    </title>
+    <link href="static/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/min.css">
+</head>
+
+<body>
+
+    <!-- The sidebar -->
+    <div class="sidebar">
+        <a class="active" href="">Home</a>
+        <a href="#ddde">xyz</a>
+        <a href="https://the-smackers.github.io/PC-Optimizations">PC and CS2 Optimizations</a>
+        <p><br></p>
+    </div>
+
+    <div class="content">
+        <!-- The banner logo -->
+        <div class="banner">
+            <div>
+                <h1 id="home">The Smackers Recommended Windows programs</h1>
+                <h2>Don't be a loser buy a defuser!</h2>
+            </div>
+        </div>
+
+        <h3 id="DarkModetext">Dark Mode for this page is ON</h3>
+        <button onclick="darkMode()">Darkmode</button>
+        <button onclick="lightMode()">LightMode</button>
+
+        <p><i>This guide is created and assembled by The Smackers, follow this guide at your own risk.</i></p>
+        <p><i>We do not provide support or help for this guide. Don&#39;t attempt anything in this guide if you can't follow the steps exactly.</i></p>
+
+        <h2 id="prep">Windows 11 fdfgfdg</h2>
+
+        <p>Nothing special/different in Windows 11 so same practices before still apply like the below tips. A clean install is always better than updating to Windows 11</p>
+        <p>Backup all your data elsewhere always and enable <a href="https://support.microsoft.com/en-us/windows/use-system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e" target="_blank" rel="noopener noreferrer">System Restore</a> and ucreate a restore point after a fresh install or before completing this guide, just in case something unexpected happens</p>
+
+        <ul>
+            <li>Check motherboard website for BIOS updates and apply a fairly recent stable one</li>
+            <li>Check in BIOS or Windows if XMP settings are (still) applied after update to Windows 11:<p>In Windows Search Bar type <code>cmd</code> hit <b>Enter</b>, then in the terminal window type: <code>wmic memorychip get speed</code></p>
+              <p>If it says 2133 for DDR4 or 4800 for DDR5 refer to <a href="#xmp" rel="noopener noreferrer">here to enable XMP</a></p></li>
+            <li>Your Windows drive must be formatted GPT not MBR, yours probably is good but this <a href="https://www.youtube.com/watch?v=lwaIWu_41_0" target="_blank" rel="noopener noreferrer">video&nbsp;</a>shows you how to check</li>
+            <li>If you are using BitLocker Drive encryption you must research how to safely do all of the above on your own</li>
+        </ul>
+
+        <p><br></p>
+
+        <h2 id="check">Windows 11 Checklist</h2>
+
+        <ol>
+            <li>Install and update Windows 11</li>
+            <li>Now Make sure Game Mode is enabled</li>
+            <li>Now Make sure <a href="https://www.howtogeek.com/756935/how-to-enable-hardware-accelerated-gpu-scheduling-in-windows-11/#enable-hardware-accelerated-gpu-scheduling-in-windows-11" target="_blank" rel="noopener noreferrer">hardware accelerated gpu scheduling and game optimizations is enabled</a>
+              <p><img class="fr-fic fr-dib fr-fil" style="width: 532px;" alt="" src="static/gpu1.png"></p><p><img class="fr-fic fr-dib fr-fil" style="width: 695px;" alt="" src="static/gpu2.png"></p></li>
+            <li>Now Check Nvidia control panel, click <strong>Manage 3d Settings</strong>, ensure that <strong>Preferred refresh rate</strong> is set to <strong>Highest available</strong> and <strong>Power management mode</strong> is set to <strong>Prefer maximum performance</strong> and click Apply
+            <p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" alt="" src="static/nvidia.png"></p></li>
+            <li>In Windows Search Bar type <code>control panel</code> hit <strong>Enter</strong>, click <strong>Power Options</strong> if you're on a Desktop PC change power plan to either <strong>High Performance</strong> or <a target="_blank" rel="noopener noreferrer" href="https://www.majorgeeks.com/content/page/how_to_turn_on_the_windows_10_ultimate_performance_power_plan.html">Ultimate Performance</a>
+            <p><img class="fr-fic fr-dib fr-fil" style="width: 895px;" alt="" src="static/power.png"></p></li>
+        </ol>
+
+        <p><br></p>
+
+        <footer>
+            <div class="footer">
+                <div class="row">
+                <a href="https://github.com/The-Smackers/PC-Optimizations"><i class="fa fa-github"></i></a>
+                <a href="https://steamcommunity.com"><i class="fa fa-steam"></i></a>
+                <a href="https://www.youtube.com"><i class="fa fa-youtube"></i></a>
+                <a href="https://x.com"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="row">
+                  <ul>
+                  <li><a href="moo@riseup.net">Contact us</a></li>
+                  <li><a href="#">Discord</a></li>
+                  <li><a href="#">Steam Giveaways</a></li>
+                  <li><a href="#">Leetify Stats</a></li>
+                  <li><a href="#">Application</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                    The Smackers &copy; 2023
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function darkMode() {
+            let element = document.body;
+            let content = document.getElementById("DarkModetext");
+            element.className = "dark-mode";
+            content.innerText = "Dark Mode for this page is ON";
+        }
+        function lightMode() {
+            let element = document.body;
+            let content = document.getElementById("DarkModetext");
+            element.className = "light-mode";
+            content.innerText = "Dark Mode for this page is OFF";
+        }
+    </script>
+</body>
+</html>
